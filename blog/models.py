@@ -10,9 +10,6 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     publish_date = models.DateTimeField(default=timezone.now)
 
-    class Meta:
-        ordering = ('-publish',)
-
     def __str__(self):
         return self.title
     
